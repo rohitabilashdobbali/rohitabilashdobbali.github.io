@@ -1,7 +1,70 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Set copyright year to current year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Set current year in footer
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Navigation active state based on scroll position
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (mobileMenuBtn && mobileMenuBtn.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    });
+    
+    // Scroll event for navigation highlighting and header effects
+    window.addEventListener('scroll', function() {
+        // Header shadow effect on scroll
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            header.style.padding = '10px 0';
+        } else {
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+            header.style.padding = '15px 0';
+        }
+        
+        // Update active nav link based on scroll position
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= sectionTop - 150) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Fade in elements when they come into view
+        revealElements();
+    });
     
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -9,186 +72,188 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Offset for header
+                    top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
         });
     });
     
-    // Simple animation for project cards when they come into view
-    const observerOptions = {
-        threshold: 0.2
-    };
+    // Publication filters
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const publications = document.querySelectorAll('.publication');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Apply initial styles and observe all project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
-    });
-    
-    // Add active class to navigation links when scrolling
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav ul li a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(btn => btn.classList.remove('active'));
             
-            if (pageYOffset >= sectionTop - 150) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get filter value
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter publications
+            publications.forEach(pub => {
+                if (filterValue === 'all' || pub.classList.contains(filterValue)) {
+                    pub.style.display = 'flex';
+                } else {
+                    pub.style.display = 'none';
+                }
+            });
         });
     });
     
-    // Simple form validation if a contact form is added later
-    const contactForm = document.querySelector('form');
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Basic validation logic would go here
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
             
-            // Show a success message
-            alert('Thanks for your message! I\'ll get back to you soon.');
-            this.reset();
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                showNotification('Please fill in all fields', 'error');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            // Simulate form submission
+            // In a real application, you would send this data to a server
+            
+            // Show success message
+            showNotification('Your message has been sent successfully!', 'success');
+            
+            // Reset form
+            contactForm.reset();
         });
     }
     
-    // Typing effect for the headline (uncomment to enable)
-    // typeWriter();
+    // Add fade-in class to elements that should animate in
+    document.querySelectorAll('.research-area, .research-project, .project-card, .publication').forEach(
+        element => {
+            element.classList.add('fade-in');
+        }
+    );
+    
+    // Initial call to set navigation and reveal elements
+    setTimeout(() => {
+        window.scrollBy(0, 1); // Trigger scroll event
+        window.scrollBy(0, -1);
+    }, 100);
+    
+    // Initial reveal of visible elements
+    revealElements();
 });
 
-// Typewriter effect function (can be enabled by uncommenting the call above)
-function typeWriter() {
-    const element = document.querySelector('.hero h1');
-    if (!element) return;
+// Helper function to reveal elements when they come into view
+function revealElements() {
+    const elements = document.querySelectorAll('.fade-in');
+    const windowHeight = window.innerHeight;
     
-    const originalText = element.innerHTML;
-    element.innerHTML = '';
-    
-    let i = 0;
-    const speed = 100; // typing speed in milliseconds
-    
-    function type() {
-        if (i < originalText.length) {
-            element.innerHTML += originalText.charAt(i);
-            i++;
-            setTimeout(type, speed);
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const revealPoint = 150;
+        
+        if (elementPosition < windowHeight - revealPoint) {
+            element.classList.add('visible');
         }
-    }
-    
-    type();
-}
-
-// Scroll to top button functionality
-function createScrollTopButton() {
-    // Create button element
-    const scrollButton = document.createElement('button');
-    scrollButton.innerHTML = '↑';
-    scrollButton.className = 'scroll-top-btn';
-    document.body.appendChild(scrollButton);
-    
-    // Style the button (you could also put this in your CSS file)
-    scrollButton.style.position = 'fixed';
-    scrollButton.style.bottom = '20px';
-    scrollButton.style.right = '20px';
-    scrollButton.style.width = '50px';
-    scrollButton.style.height = '50px';
-    scrollButton.style.borderRadius = '50%';
-    scrollButton.style.backgroundColor = 'var(--primary-color)';
-    scrollButton.style.color = 'white';
-    scrollButton.style.border = 'none';
-    scrollButton.style.fontSize = '20px';
-    scrollButton.style.cursor = 'pointer';
-    scrollButton.style.display = 'none';
-    scrollButton.style.zIndex = '1000';
-    scrollButton.style.transition = 'all 0.3s ease';
-    
-    // Show/hide the button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollButton.style.display = 'block';
-        } else {
-            scrollButton.style.display = 'none';
-        }
-    });
-    
-    // Scroll to top when clicked
-    scrollButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 }
 
-// Uncomment to add a scroll-to-top button
-// createScrollTopButton();
-
-// Optional dark mode toggle functionality
-function enableDarkMode() {
-    const body = document.body;
-    body.classList.toggle('dark-mode');
+// Function to show notifications
+function showNotification(message, type) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
     
-    // Save preference to localStorage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
+    // Add notification to the DOM
+    document.body.appendChild(notification);
+    
+    // Set position styles for the notification
+    notification.style.position = 'fixed';
+    notification.style.bottom = '20px';
+    notification.style.right = '20px';
+    notification.style.padding = '15px 25px';
+    notification.style.borderRadius = '5px';
+    notification.style.fontWeight = '500';
+    notification.style.zIndex = '9999';
+    notification.style.transform = 'translateY(100px)';
+    notification.style.opacity = '0';
+    notification.style.transition = 'all 0.3s ease';
+    
+    // Set color based on notification type
+    if (type === 'success') {
+        notification.style.backgroundColor = 'rgba(3, 218, 198, 0.9)';
+        notification.style.color = '#121212';
+    } else if (type === 'error') {
+        notification.style.backgroundColor = 'rgba(207, 102, 121, 0.9)';
+        notification.style.color = '#ffffff';
     } else {
-        localStorage.setItem('darkMode', 'disabled');
+        notification.style.backgroundColor = 'rgba(0, 188, 212, 0.9)';
+        notification.style.color = '#121212';
     }
+    
+    // Animate notification in
+    setTimeout(() => {
+        notification.style.transform = 'translateY(0)';
+        notification.style.opacity = '1';
+    }, 10);
+    
+    // Remove notification after 5 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateY(100px)';
+        notification.style.opacity = '0';
+        
+        // Remove from DOM after animation
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 5000);
 }
 
-// Check for saved dark mode preference
-function checkDarkModeSetting() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-    }
+// Intersection Observer for better performance
+if ('IntersectionObserver' in window) {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const handleIntersect = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+    
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    });
 }
-
-// Uncomment to enable dark mode feature
-// checkDarkModeSetting();
-
-// You would need to add CSS for dark mode like this in your CSS file:
-/*
-.dark-mode {
-    --primary-color: #4da6ff;
-    --primary-dark: #0080ff;
-    --text-color: #f5f5f5;
-    --text-light: #cccccc;
-    --bg-light: #2a2a2a;
-    --border-color: #444;
-    background-color: #1a1a1a;
-}
-*/
-
-// Window resize handler for responsive adjustments
-window.addEventListener('resize', function() {
-    // Add any responsive adjustments here if needed
-});
