@@ -1,4 +1,3 @@
-cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +5,12 @@ cat > index.html << 'EOF'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">Your Name</div>
+        <div class="logo">Rohit Abilash</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -21,121 +22,82 @@ cat > index.html << 'EOF'
     </header>
     
     <section id="home" class="hero">
-        <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+        <h1>Hello, I'm <span class="highlight">Rohit Abilash</span></h1>
         <p>A passionate developer focused on creating beautiful and functional experiences.</p>
         <a href="#contact" class="btn">Get in Touch</a>
     </section>
     
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://picsum.photos/400/300?random=1" alt="Project 1">
+                <div class="project-content">
+                    <h3>Project One</h3>
+                    <p>A short description of this amazing project and what technologies were used.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://picsum.photos/400/300?random=2" alt="Project 2">
+                <div class="project-content">
+                    <h3>Project Two</h3>
+                    <p>A short description of this amazing project and what technologies were used.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://picsum.photos/400/300?random=3" alt="Project 3">
+                <div class="project-content">
+                    <h3>Project Three</h3>
+                    <p>A short description of this amazing project and what technologies were used.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>This is my personal website hosted on GitHub Pages.</p>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://picsum.photos/400/400?random=4" alt="Rohit Abilash">
+            </div>
+            <div class="about-text">
+                <p>Hello! I'm a passionate developer with experience in building websites and web applications. I love solving problems and creating intuitive, dynamic user experiences.</p>
+                <p>I work with HTML, CSS, JavaScript, and various frameworks and libraries. I'm always looking to learn new technologies and improve my skills.</p>
+                
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Let's Connect</h2>
+        <p>Interested in working together or have a question? Feel free to reach out!</p>
+        <a href="mailto:your.email@example.com" class="btn">Send Email</a>
+        
+        <div class="social-links">
+            <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
     </section>
     
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-EOF
-
-cat > styles.css << 'EOF'
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.highlight {
-    color: #0066ff;
-}
-
-.btn {
-    display: inline-block;
-    background: #0066ff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-.about {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-EOF
-
-cat > script.js << 'EOF'
-document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-    
-    // Add smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    console.log('Website loaded successfully!');
-});
-EOF
