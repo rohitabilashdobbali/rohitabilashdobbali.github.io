@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <!-- Inline critical CSS to ensure the dark theme loads immediately -->
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        /* Ensure navigation items display properly */
+        nav ul {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li a {
+            color: #b0b0b0;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover, 
+        nav ul li a.active {
+            color: #00bcd4;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,17 +38,17 @@
             <div class="logo">
                 <a href="#home">Rohit Abilash</a>
             </div>
-           <nav>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <button class="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -64,7 +88,7 @@
                     <p>Currently, I am working as a Research Assistant and Teaching Assistant at the University of Toledo, focusing on AI and ML research in hardware security.</p>
                     <div class="current-position">
                         <h3>Current Position</h3>
-                       <p><i class="fas fa-briefcase"></i> Research Assistant at ADMETE lab</p>
+                        <p><i class="fas fa-briefcase"></i> Research Assistant at ADMETE lab</p>
                         <p><i class="fas fa-university"></i> Master's in computer science at University of Toledo</p>
                     </div>
                 </div>
@@ -113,7 +137,7 @@
                 </div>
                 <div class="research-area">
                     <div class="research-icon">
-                        <i class="fas fa-chart-network"></i>
+                        <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3>Graph Neural Networks</h3>
                     <p>Exploring graph-based deep learning approaches for analyzing interconnected data structures and relational information in various domains.</p>
@@ -161,6 +185,50 @@
                             <span class="project-funding">Funded by Tech Innovation Grant</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2>Achievements & Certificates</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="achievements-highlights">
+                <p>Throughout my academic and professional journey, I've earned recognition for my work in artificial intelligence, hardware security, and technological innovation.</p>
+                
+                <div class="achievement-highlights-grid">
+                    <div class="achievement-highlight-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Recognized for outstanding academic performance and research contributions in computer science and hardware security.</p>
+                    </div>
+                    
+                    <div class="achievement-highlight-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Technical Certifications</h3>
+                        <p>Industry certifications in AI, machine learning, and advanced computing technologies from leading institutions.</p>
+                    </div>
+                    
+                    <div class="achievement-highlight-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Research Recognition</h3>
+                        <p>Awards and grants for innovative research in hardware Trojan detection and AI-driven security solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="view-more-button">
+                    <a href="achievements.html" class="btn primary-btn">View All Achievements</a>
                 </div>
             </div>
         </div>
@@ -320,7 +388,7 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:email@example.com">rohitadobbali@gmail.com</a>
+                            <a href="mailto:rohitadobbali@gmail.com">rohitadobbali@gmail.com</a>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -379,5 +447,63 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Add additional CSS for the new achievements section -->
+    <style>
+        .achievements {
+            padding: var(--section-padding);
+            background-color: var(--background);
+        }
+        
+        .achievement-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .achievement-highlight-item {
+            background-color: var(--surface);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-highlight-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 188, 212, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+        
+        .achievement-icon i {
+            font-size: 30px;
+            color: #00bcd4;
+        }
+        
+        .achievement-highlight-item h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        
+        .achievement-highlight-item p {
+            color: #b0b0b0;
+        }
+        
+        .view-more-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </body>
 </html>
