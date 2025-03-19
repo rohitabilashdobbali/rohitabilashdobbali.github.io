@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Rohit Abilash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Rohit Abilash</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html" class="active">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="achievements" style="padding-top: 150px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Achievements & Certificates</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="achievement-list">
+                <div class="achievement-item">
+                    <h3>Outstanding Research Award</h3>
+                    <p>Recognized for exceptional contributions to hardware security research.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                        <span><i class="fas fa-university"></i> University of Toledo</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-item">
+                    <h3>Best Paper Award</h3>
+                    <p>Awarded for innovative research in hardware Trojan detection.</p>
+                    <div class="achievement-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                        <span><i class="fas fa-award"></i> Security Conference</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
