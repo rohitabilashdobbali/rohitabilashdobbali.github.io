@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Rohit Abilash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Rohit Abilash</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Publications</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="publication-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="journal">Journal</button>
+                <button class="filter-btn" data-filter="conference">Conference</button>
+                <button class="filter-btn" data-filter="preprint">Preprint</button>
+            </div>
+            
+            <div class="publications-list">
+                <div class="publication journal">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-content">
+                        <h3>"A Novel Approach to Interpretable Deep Learning for Medical Image Analysis"</h3>
+                        <p class="authors">Abilash R., Johnson M., Smith P.</p>
+                        <p class="venue">Journal of Medical Artificial Intelligence, Vol. 15, pp. 234-245</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication conference">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h3>"Graph Neural Networks for Molecular Property Prediction"</h3>
+                        <p class="authors">Abilash R., Chen L., Davis K.</p>
+                        <p class="venue">Proceedings of the International Conference on Machine Learning (ICML 2022)</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication preprint">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h3>"Efficient Transformer Architectures for Edge Devices"</h3>
+                        <p class="authors">Abilash R., Wang Y.</p>
+                        <p class="venue">arXiv preprint arXiv:2205.XXXXX</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication journal">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-content">
+                        <h3>"Reinforcement Learning for Autonomous Navigation in Dynamic Environments"</h3>
+                        <p class="authors">Lee J., Abilash R., Taylor N.</p>
+                        <p class="venue">IEEE Transactions on Robotics, Vol. 37, Issue 4</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Publication filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const publications = document.querySelectorAll('.publication');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter publications
+                publications.forEach(pub => {
+                    if (filterValue === 'all' || pub.classList.contains(filterValue)) {
+                        pub.style.display = 'flex';
+                    } else {
+                        pub.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
