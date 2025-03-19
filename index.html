@@ -3,214 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Abilash - Academic Portfolio</title>
+    <title>Rohit Abilash - Researcher & Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#home">Rohit Abilash</a>
+            </div>
             <nav>
-                <div class="name">ROHIT ABILASH</div>
-                <ul class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#publications">Publications</a></li>
-                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="profile-image">
-                        <img src="https://picsum.photos/400/400?random=1" alt="Rohit Abilash">
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Rohit Abilash</h1>
+                    <h2>Researcher & Developer</h2>
+                    <p>Exploring the intersection of technology and innovation.</p>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn primary-btn">My Research</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
                     </div>
-                    <div class="about-text">
-                        <h1>Rohit Abilash</h1>
-                        <p class="subtitle">PhD Candidate in Computer Science</p>
-                        <p class="affiliation">University of Technology</p>
-                        <p class="bio">
-                            I am a PhD candidate in Computer Science, specializing in artificial intelligence and machine learning. 
-                            My research focuses on developing novel algorithms for efficient deep learning on resource-constrained devices.
-                        </p>
-                        <div class="quick-links">
-                            <a href="#" class="btn-outline"><i class="far fa-file-pdf"></i> CV</a>
-                            <a href="#contact" class="btn-outline"><i class="far fa-envelope"></i> Contact</a>
-                            <div class="social-links">
-                                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/500/500?random=1" alt="Rohit Abilash">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a researcher and developer with a focus on artificial intelligence and machine learning applications. My work aims to bridge theoretical concepts with practical implementations to solve real-world problems.</p>
+                    <p>Currently, I am working on developing novel algorithms for natural language processing and computer vision applications, with a particular interest in healthcare and education domains.</p>
+                    <div class="current-position">
+                        <h3>Current Position</h3>
+                        <p><i class="fas fa-briefcase"></i> Research Scientist at AI Research Lab</p>
+                        <p><i class="fas fa-university"></i> PhD Candidate at University of Technology</p>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="year">2020-Present</div>
+                                <div class="info">
+                                    <h4>PhD in Computer Science</h4>
+                                    <p>University of Technology</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2018-2020</div>
+                                <div class="info">
+                                    <h4>MSc in Artificial Intelligence</h4>
+                                    <p>Tech Institute</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2014-2018</div>
+                                <div class="info">
+                                    <h4>BSc in Computer Engineering</h4>
+                                    <p>University of Sciences</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="research" class="research-section">
-            <div class="container">
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-header">
                 <h2>Research</h2>
-                <div class="research-interests">
-                    <h3>Research Interests</h3>
-                    <ul>
-                        <li>Machine Learning</li>
-                        <li>Computer Vision</li>
-                        <li>Edge Computing</li>
-                        <li>Natural Language Processing</li>
-                    </ul>
+                <div class="underline"></div>
+            </div>
+            <div class="research-overview">
+                <p>My research is focused on developing advanced algorithms and computational methods to solve complex problems in artificial intelligence and data science. I am particularly interested in the following areas:</p>
+            </div>
+            <div class="research-areas">
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Deep Learning</h3>
+                    <p>Developing novel neural network architectures for processing complex data types with applications in computer vision and natural language processing.</p>
                 </div>
-                
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3>Graph Neural Networks</h3>
+                    <p>Exploring graph-based deep learning approaches for analyzing interconnected data structures and relational information in various domains.</p>
+                </div>
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Reinforcement Learning</h3>
+                    <p>Investigating decision-making algorithms and their applications in autonomous systems and sequential decision problems.</p>
+                </div>
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Efficient AI</h3>
+                    <p>Designing resource-efficient deep learning algorithms for deployment on edge devices and resource-constrained environments.</p>
+                </div>
+            </div>
+
+            <div class="current-projects">
+                <h3>Current Research Projects</h3>
                 <div class="research-projects">
-                    <h3>Current Projects</h3>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://picsum.photos/600/400?random=2" alt="Research Project 1">
-                        </div>
-                        <div class="project-content">
-                            <h4>Efficient Neural Network Training for Edge Devices</h4>
-                            <p>This research explores novel techniques to train neural networks directly on edge devices with limited computational resources, enabling personalized on-device learning while preserving privacy.</p>
-                            <div class="project-tags">
-                                <span>Deep Learning</span>
-                                <span>Edge Computing</span>
-                                <span>Privacy</span>
-                            </div>
+                    <div class="research-project">
+                        <h4>Interpretable Deep Learning for Medical Imaging</h4>
+                        <p>Developing interpretable deep learning models for medical image analysis that provide explanations for their predictions, enhancing trust and adoption in clinical settings.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-collab">Collaboration with University Hospital</span>
                         </div>
                     </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://picsum.photos/600/400?random=3" alt="Research Project 2">
+                    <div class="research-project">
+                        <h4>Graph Neural Networks for Drug Discovery</h4>
+                        <p>Utilizing graph neural networks to predict molecular properties and drug-target interactions, accelerating the drug discovery process.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-collab">Collaboration with Pharmaceutical Research Institute</span>
                         </div>
-                        <div class="project-content">
-                            <h4>Transformer Models for Low-Resource Languages</h4>
-                            <p>Developing lightweight transformer architectures that can be effectively trained on limited datasets, enabling NLP applications for low-resource languages.</p>
-                            <div class="project-tags">
-                                <span>NLP</span>
-                                <span>Transformers</span>
-                                <span>Low-resource Languages</span>
-                            </div>
+                    </div>
+                    <div class="research-project">
+                        <h4>Energy-Efficient Deep Learning</h4>
+                        <p>Researching model compression and quantization techniques to reduce the computational and memory requirements of deep neural networks.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-funding">Funded by Tech Innovation Grant</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="publications" class="publications-section">
-            <div class="container">
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
                 <h2>Publications</h2>
-                
-                <div class="publication">
+                <div class="underline"></div>
+            </div>
+            <div class="publication-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="journal">Journal</button>
+                <button class="filter-btn" data-filter="conference">Conference</button>
+                <button class="filter-btn" data-filter="preprint">Preprint</button>
+            </div>
+            <div class="publications-list">
+                <div class="publication journal">
                     <div class="pub-year">2023</div>
                     <div class="pub-content">
-                        <h4>Neural Compression for Efficient Edge Deployment</h4>
-                        <p class="authors">Rohit Abilash, Jane Smith, John Doe</p>
-                        <p class="venue">International Conference on Machine Learning (ICML 2023)</p>
+                        <h3>"A Novel Approach to Interpretable Deep Learning for Medical Image Analysis"</h3>
+                        <p class="authors">Abilash R., Johnson M., Smith P.</p>
+                        <p class="venue">Journal of Medical Artificial Intelligence, Vol. 15, pp. 234-245</p>
                         <div class="pub-links">
-                            <a href="#" class="btn-small"><i class="far fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="btn-small"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="publication">
+                <div class="publication conference">
                     <div class="pub-year">2022</div>
                     <div class="pub-content">
-                        <h4>Efficient Fine-tuning of Transformers on Edge Devices</h4>
-                        <p class="authors">John Doe, Rohit Abilash, Alice Jones</p>
-                        <p class="venue">Conference on Neural Information Processing Systems (NeurIPS 2022)</p>
+                        <h3>"Graph Neural Networks for Molecular Property Prediction"</h3>
+                        <p class="authors">Abilash R., Chen L., Davis K.</p>
+                        <p class="venue">Proceedings of the International Conference on Machine Learning (ICML 2022)</p>
                         <div class="pub-links">
-                            <a href="#" class="btn-small"><i class="far fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="btn-small"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="publication">
+                <div class="publication preprint">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h3>"Efficient Transformer Architectures for Edge Devices"</h3>
+                        <p class="authors">Abilash R., Wang Y.</p>
+                        <p class="venue">arXiv preprint arXiv:2205.XXXXX</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication journal">
                     <div class="pub-year">2021</div>
                     <div class="pub-content">
-                        <h4>Privacy-Preserving Learning with Differential Privacy Guarantees</h4>
-                        <p class="authors">Rohit Abilash, Sarah Williams</p>
-                        <p class="venue">Privacy Enhancing Technologies Symposium (PETS 2021)</p>
+                        <h3>"Reinforcement Learning for Autonomous Navigation in Dynamic Environments"</h3>
+                        <p class="authors">Lee J., Abilash R., Taylor N.</p>
+                        <p class="venue">IEEE Transactions on Robotics, Vol. 37, Issue 4</p>
                         <div class="pub-links">
-                            <a href="#" class="btn-small"><i class="far fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="btn-small"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="btn-small"><i class="fas fa-link"></i> DOI</a>
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="teaching" class="teaching-section">
-            <div class="container">
-                <h2>Teaching</h2>
-                
-                <div class="teaching-experience">
-                    <div class="course">
-                        <div class="course-term">Spring 2023</div>
-                        <div class="course-content">
-                            <h4>CS 4880: Machine Learning</h4>
-                            <p>Teaching Assistant</p>
-                            <p>Conducted weekly lab sessions, graded assignments, and held office hours to assist students with course material and projects.</p>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://picsum.photos/600/400?random=10" alt="AI Visualization Tool">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Visualization Tool</h3>
+                        <p>An interactive tool for visualizing neural network decision processes in real-time, helping researchers understand model behavior.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
-                    
-                    <div class="course">
-                        <div class="course-term">Fall 2022</div>
-                        <div class="course-content">
-                            <h4>CS 4290: Introduction to Artificial Intelligence</h4>
-                            <p>Teaching Assistant</p>
-                            <p>Designed and graded programming assignments, prepared lab materials, and mentored students on course projects.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://picsum.photos/600/400?random=11" alt="Medical Image Analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3>Medical Image Analysis Platform</h3>
+                        <p>A comprehensive platform for analyzing medical images using deep learning, with modules for segmentation, classification, and anomaly detection.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
                         </div>
                     </div>
-                    
-                    <div class="course">
-                        <div class="course-term">Spring 2022</div>
-                        <div class="course-content">
-                            <h4>CS 3240: Data Structures and Algorithms</h4>
-                            <p>Teaching Assistant</p>
-                            <p>Led weekly recitation sessions, graded assignments, and created supplementary learning materials.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://picsum.photos/600/400?random=12" alt="Drug Discovery">
+                    </div>
+                    <div class="project-content">
+                        <h3>Graph-based Drug Discovery</h3>
+                        <p>A toolset for molecular property prediction and drug-target interaction using graph neural networks.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">DGL</span>
+                            <span class="tech-tag">RDKit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="project-link"><i class="fas fa-database"></i> Dataset</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="contact-section">
-            <div class="container">
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
                 <h2>Contact</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>rohit.abilash@example.edu</p>
+                    <h3>Get in Touch</h3>
+                    <p>Feel free to reach out for research collaborations, project inquiries, or just to say hello.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:email@example.com">email@example.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Department of Computer Science, University of Technology, City, Country</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Computer Science Department<br>University of Technology<br>123 University Avenue<br>City, State 12345</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+1 (123) 456-7890</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                     </div>
                 </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
-            <p>Last updated: March 2025</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#home" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
