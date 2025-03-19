@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Rohit Abilash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Rohit Abilash</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="research">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Research</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="research-overview">
+                <p>My research is focused on developing advanced algorithms and computational methods to solve complex problems in artificial intelligence and data science. I am particularly interested in the following areas:</p>
+            </div>
+            <div class="research-areas">
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Deep Learning</h3>
+                    <p>Developing novel neural network architectures for processing complex data types with applications in computer vision and natural language processing.</p>
+                </div>
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Graph Neural Networks</h3>
+                    <p>Exploring graph-based deep learning approaches for analyzing interconnected data structures and relational information in various domains.</p>
+                </div>
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Reinforcement Learning</h3>
+                    <p>Investigating decision-making algorithms and their applications in autonomous systems and sequential decision problems.</p>
+                </div>
+                <div class="research-area">
+                    <div class="research-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Efficient AI</h3>
+                    <p>Designing resource-efficient deep learning algorithms for deployment on edge devices and resource-constrained environments.</p>
+                </div>
+            </div>
+
+            <div class="current-projects">
+                <h3>Current Research Projects</h3>
+                <div class="research-projects">
+                    <div class="research-project">
+                        <h4>Interpretable Deep Learning for Medical Imaging</h4>
+                        <p>Developing interpretable deep learning models for medical image analysis that provide explanations for their predictions, enhancing trust and adoption in clinical settings.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-collab">Collaboration with University Hospital</span>
+                        </div>
+                    </div>
+                    <div class="research-project">
+                        <h4>Graph Neural Networks for Drug Discovery</h4>
+                        <p>Utilizing graph neural networks to predict molecular properties and drug-target interactions, accelerating the drug discovery process.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-collab">Collaboration with Pharmaceutical Research Institute</span>
+                        </div>
+                    </div>
+                    <div class="research-project">
+                        <h4>Energy-Efficient Deep Learning</h4>
+                        <p>Researching model compression and quantization techniques to reduce the computational and memory requirements of deep neural networks.</p>
+                        <div class="project-details">
+                            <span class="project-status">Ongoing</span>
+                            <span class="project-funding">Funded by Tech Innovation Grant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
