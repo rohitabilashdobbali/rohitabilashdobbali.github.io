@@ -257,18 +257,17 @@ nav ul li a.active::after {
 }
 
 .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 300px;  /* Fixed width */
+    height: 300px; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Clips image to circle */
 }
 
 .hero-image img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-    border: 3px solid var(--surface-light);
+    width: 100%;    /* Fill container width */
+    height: 100%;   /* Fill container height */
+    object-fit: cover;  /* Maintain aspect ratio */
+    object-position: center; /* Center the image */
 }
 
 /* About Section */
