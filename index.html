@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <!-- Inline critical CSS to ensure the dark theme loads immediately -->
     <style>
         body {
@@ -42,16 +39,17 @@
                 <a href="#home">Rohit Abilash</a>
             </div>
             <nav>
-            <ul>
-                <li><a href="index.html" id="nav-home">Home</a></li>
-                <li><a href="about.html" id="nav-about">About</a></li>
-                <li><a href="research.html" id="nav-research">Research</a></li>
-               <!-- <li><a href="publications.html" id="nav-publications">Publications</a></li> -->
-                <li><a href="projects.html" id="nav-projects">Projects</a></li>
-                <li><a href="achievements.html" id="nav-achievements">Achievements</a></li>
-                <li><a href="contact.html" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <button class="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -62,23 +60,23 @@
 
     
     <section id="home" class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Rohit Abilash</h1>
-                <h2>Researcher & Developer</h2>
-                <p>Exploring the intersection of technology and innovation.</p>
-                <div class="hero-buttons">
-                    <a href="#research" class="btn primary-btn">My Research</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Rohit Abilash</h1>
+                    <h2>Researcher & Developer</h2>
+                    <p>Exploring the intersection of technology and innovation.</p>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn primary-btn">My Research</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="pic.jpg" alt="Rohit Abilash">
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="pic.jpg" alt="Rohit Abilash">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="about" class="about">
         <div class="container">
@@ -151,7 +149,7 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>Reinforcement Learning</h3>
-                    <p>Using reinforcement learning to improve hardware security by automatically detecting and responding to potential threats.This approach helps in building smarter and more adaptive security defenses</p>
+                    <p>Using reinforcement learning to improve hardware security by automatically detecting and responding to potential threats. This approach helps in building smarter and more adaptive security defenses.</p>
                 </div>
                 <div class="research-area">
                     <div class="research-icon">
@@ -194,11 +192,49 @@
         </div>
     </section>
 
+    <!-- Experience Highlight Section -->
+    <section id="experience-highlight" class="experience-highlight">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Research Assistant</h3>
+                    <p>University of Toledo - ADMETE Lab</p>
+                    <span class="experience-duration">2023 - Present</span>
+                    <p class="experience-summary">Conducting research on AI-driven hardware security, developing novel detection methods for hardware trojans.</p>
+                    <a href="experience.html" class="btn primary-btn">View Details</a>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Salesforce Developer</h3>
+                    <p>Previous Organization</p>
+                    <span class="experience-duration">2021 - 2023</span>
+                    <p class="experience-summary">Designed and implemented custom Salesforce solutions, optimizing business processes and improving data management.</p>
+                    <a href="experience.html" class="btn primary-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="view-more-experience" style="text-align: center; margin-top: 40px;">
+                <a href="experience.html" class="btn secondary-btn">View Full Experience</a>
+            </div>
+        </div>
+    </section>
+
     <!-- New Achievements Section -->
     <section id="achievements" class="achievements">
         <div class="container">
             <div class="section-header">
-                <h2>Achievements & Certificates</h2>
+                <h2>Achievements & Certifications</h2>
                 <div class="underline"></div>
             </div>
             
@@ -219,7 +255,7 @@
                             <i class="fas fa-certificate"></i>
                         </div>
                         <h3>Technical Certifications</h3>
-                        <p>Industry certifications in Salesforce, AI,machine learning, and hardware security from leading institutions.</p>
+                        <p>Industry certifications in Salesforce, AI, machine learning, and hardware security from leading institutions.</p>
                     </div>
                     
                     <div class="achievement-highlight-item">
@@ -238,73 +274,6 @@
         </div>
     </section>
 
-     <!-- <section id="publications" class="publications">
-        <div class="container">
-            <div class="section-header">
-                <h2>Publications</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="publication-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="journal">Journal</button>
-                <button class="filter-btn" data-filter="conference">Conference</button>
-                <button class="filter-btn" data-filter="preprint">Preprint</button>
-            </div>
-            <div class="publications-list">
-                <div class="publication journal">
-                    <div class="pub-year">2023</div>
-                    <div class="pub-content">
-                        <h3>"A Novel Approach to Interpretable Deep Learning for Medical Image Analysis"</h3>
-                        <p class="authors">Abilash R., Johnson M., Smith P.</p>
-                        <p class="venue">Journal of Medical Artificial Intelligence, Vol. 15, pp. 234-245</p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="publication conference">
-                    <div class="pub-year">2022</div>
-                    <div class="pub-content">
-                        <h3>"Graph Neural Networks for Molecular Property Prediction"</h3>
-                        <p class="authors">Abilash R., Chen L., Davis K.</p>
-                        <p class="venue">Proceedings of the International Conference on Machine Learning (ICML 2022)</p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="publication preprint">
-                    <div class="pub-year">2022</div>
-                    <div class="pub-content">
-                        <h3>"Efficient Transformer Architectures for Edge Devices"</h3>
-                        <p class="authors">Abilash R., Wang Y.</p>
-                        <p class="venue">arXiv preprint arXiv:2205.XXXXX</p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="publication journal">
-                    <div class="pub-year">2021</div>
-                    <div class="pub-content">
-                        <h3>"Reinforcement Learning for Autonomous Navigation in Dynamic Environments"</h3>
-                        <p class="authors">Lee J., Abilash R., Taylor N.</p>
-                        <p class="venue">IEEE Transactions on Robotics, Vol. 37, Issue 4</p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -318,7 +287,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Enhancing Hardware Trojan Detection with Synthetic Data</h3>
-                        <p>My research focuses on enhancing hardware Trojan detection by addressing data scarcity and imbalance using Conditional Wasserstein GANs (CWGANs). This approach generates realistic power, voltage, and current signal profiles for both Trojan-infected and benign circuits. Baseline classification on original datasets achieved 92.98% accuracy, validating detection robustness. Synthetic datasets exhibited near-perfect accuracy, but a performance gap emerged when models trained on synthetic data were tested on original datasets, highlighting domain shift challenges. This work establishes synthetic data as a scalable and cost-effective solution for hardware security, paving the way for more robust detection systems..</p>
+                        <p>My research focuses on enhancing hardware Trojan detection by addressing data scarcity and imbalance using Conditional Wasserstein GANs (CWGANs). This approach generates realistic power, voltage, and current signal profiles for both Trojan-infected and benign circuits. Baseline classification on original datasets achieved 92.98% accuracy, validating detection robustness. Synthetic datasets exhibited near-perfect accuracy, but a performance gap emerged when models trained on synthetic data were tested on original datasets, highlighting domain shift challenges. This work establishes synthetic data as a scalable and cost-effective solution for hardware security, paving the way for more robust detection systems.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">TensorFlow</span>
@@ -357,7 +326,7 @@
                         <img src="https://picsum.photos/600/400?random=12" alt="Drug Discovery">
                     </div>
                     <div class="project-content">
-                        <h3>AI Agent for Trojan Detection in Side-Channel Analysisy</h3>
+                        <h3>AI Agent for Trojan Detection in Side-Channel Analysis</h3>
                         <p>This project develops an AI-powered intelligent agent for Hardware Trojan detection in side-channel analysis, leveraging LLMs (LLaMA API) to analyze and classify signals from electronic circuits. The AI agent is designed to automate the detection of Trojans in hardware devices by learning patterns from power, voltage, and current signal data and identifying anomalies indicative of malicious modifications.
                             By integrating machine learning, deep learning, and large language models (LLMs), this system enhances hardware security through advanced AI-driven analysis. The agent is equipped with a web-based interface, allowing users to input signal data, visualize detection results, and gain AI-driven insights into potential Trojan threats.</p>
                         <div class="project-tech">
@@ -375,6 +344,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="view-more-button" style="text-align: center; margin-top: 40px;">
+                <a href="projects.html" class="btn primary-btn">View All Projects</a>
             </div>
         </div>
     </section>
@@ -452,8 +424,9 @@
 
     <script src="script.js"></script>
     
-    <!-- Add additional CSS for the new achievements section -->
+    <!-- Additional CSS for the new sections -->
     <style>
+        /* Achievements section styles */
         .achievements {
             padding: var(--section-padding);
             background-color: var(--background);
@@ -507,6 +480,79 @@
         .view-more-button {
             text-align: center;
             margin-top: 30px;
+        }
+        
+        /* Experience highlight section styles */
+        .experience-highlight {
+            padding: var(--section-padding);
+            background-color: var(--surface);
+        }
+        
+        .experience-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .experience-card {
+            background-color: var(--surface-light);
+            border-radius: var(--card-border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .experience-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 188, 212, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+        
+        .experience-icon i {
+            font-size: 30px;
+            color: var(--primary);
+        }
+        
+        .experience-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        
+        .experience-card p {
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+        
+        .experience-duration {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: rgba(0, 188, 212, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 10px 0;
+        }
+        
+        .experience-summary {
+            margin: 15px 0 20px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .experience-cards,
+            .achievement-highlights-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </body>
