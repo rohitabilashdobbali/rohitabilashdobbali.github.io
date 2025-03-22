@@ -256,19 +256,6 @@ nav ul li a.active::after {
     gap: 15px;
 }
 
-.hero-image {
-    width: 300px;  /* Fixed width */
-    height: 300px; /* Fixed height */
-    border-radius: 50%; /* Circular shape */
-    overflow: hidden; /* Clips image to circle */
-}
-
-.hero-image img {
-    width: 100%;    /* Fill container width */
-    height: 100%;   /* Fill container height */
-    object-fit: cover;  /* Maintain aspect ratio */
-    object-position: center; /* Center the image */
-}
 
 .hero-image img {
     max-width: 100%;
