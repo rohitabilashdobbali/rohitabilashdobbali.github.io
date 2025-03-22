@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Rohit Abilash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        .experience-section {
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+        
+        .experience-item {
+            background-color: var(--surface);
+            border-radius: var(--card-border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .experience-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .experience-company {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .experience-date {
+            color: var(--text-tertiary);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .experience-date i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .experience-description {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .experience-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .experience-skill {
+            padding: 6px 12px;
+            background-color: var(--surface-light);
+            color: var(--primary);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .experience-skill:hover {
+            background-color: rgba(0, 188, 212, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .view-projects-btn {
+            margin-top: 25px;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .experience-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .experience-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Rohit Abilash</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html" class="active">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Research Assistant & Teaching Assistant</h3>
+                        <p class="experience-company">University of Toledo - ADMETE Lab</p>
+                    </div>
+                    <div class="experience-date">
+                        <i class="fas fa-calendar-alt"></i> 2023 - Present (2 years)
+                    </div>
+                </div>
+                <div class="experience-description">
+                    <p>Currently working as a Research Assistant at the ADMETE Lab, where I focus on applying artificial intelligence and machine learning techniques to hardware security challenges. My research primarily involves developing novel methods for Hardware Trojan detection using various techniques:</p>
+                    
+                    <ul style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px; color: var(--text-secondary);">
+                        <li>Developing deep learning architectures for side-channel signal analysis</li>
+                        <li>Creating synthetic datasets using generative adversarial networks to improve detection models</li>
+                        <li>Implementing fuzzy logic systems for handling uncertainty in hardware security data</li>
+                        <li>Building AI agents that leverage large language models for automated security analysis</li>
+                    </ul>
+                    
+                    <p>Additionally, I serve as a Teaching Assistant for graduate-level computer science courses, helping students understand complex concepts in machine learning, artificial intelligence, and hardware security. This role includes conducting lab sessions, grading assignments, and providing one-on-one assistance to students.</p>
+                    
+                    <div class="experience-skills">
+                        <span class="experience-skill">AI & Machine Learning</span>
+                        <span class="experience-skill">Hardware Security</span>
+                        <span class="experience-skill">Python</span>
+                        <span class="experience-skill">TensorFlow</span>
+                        <span class="experience-skill">PyTorch</span>
+                        <span class="experience-skill">GANs</span>
+                        <span class="experience-skill">Fuzzy Logic</span>
+                        <span class="experience-skill">Research Methodology</span>
+                    </div>
+                    
+                    <div class="view-projects-btn">
+                        <a href="projects.html" class="btn primary-btn">View Related Projects</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Salesforce Developer</h3>
+                        <p class="experience-company">Previous Organization</p>
+                    </div>
+                    <div class="experience-date">
+                        <i class="fas fa-calendar-alt"></i> 2021 - 2023 (2 years)
+                    </div>
+                </div>
+                <div class="experience-description">
+                    <p>Worked as a Salesforce Developer designing and implementing custom CRM solutions for enterprise clients. My responsibilities included:</p>
+                    
+                    <ul style="margin-left: 20px; margin-top: 15px; margin-bottom: 15px; color: var(--text-secondary);">
+                        <li>Developing custom Salesforce applications using Apex, Lightning Components, and Visualforce</li>
+                        <li>Creating complex automation workflows with Process Builder and Flow</li>
+                        <li>Designing and implementing custom objects, fields, and relationships</li>
+                        <li>Building integrations between Salesforce and external systems using REST APIs</li>
+                        <li>Optimizing database queries and improving application performance</li>
+                        <li>Providing technical documentation and training to end users</li>
+                    </ul>
+                    
+                    <p>Successfully delivered multiple projects that streamlined business processes, improved data management, and enhanced user experience for clients across various industries including healthcare, finance, and retail.</p>
+                    
+                    <div class="experience-skills">
+                        <span class="experience-skill">Salesforce</span>
+                        <span class="experience-skill">Apex</span>
+                        <span class="experience-skill">Lightning Components</span>
+                        <span class="experience-skill">Visualforce</span>
+                        <span class="experience-skill">SOQL</span>
+                        <span class="experience-skill">JavaScript</span>
+                        <span class="experience-skill">REST API</span>
+                        <span class="experience-skill">Integration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+        
+        // Add scroll animation for experience items
+        document.addEventListener('DOMContentLoaded', () => {
+            const experienceItems = document.querySelectorAll('.experience-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            experienceItems.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
