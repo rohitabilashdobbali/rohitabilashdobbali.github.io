@@ -1,0 +1,55 @@
+/* Fix for navigation highlighting - add to your styles.css file */
+
+/* Reset all navigation link styles */
+nav ul li a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation base style */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+/* Hover state - only change color, don't show underline on hover */
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* Active state - both color and underline */
+nav ul li a.active {
+    color: var(--primary);
+}
+
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Override hover effect on active items */
+nav ul li a.active:hover::after {
+    width: 100%;
+}
+
+/* Ensure no other elements interfere with navigation highlight */
+header {
+    z-index: 1000;
+}
+
+/* Add space below header for fixed positioning */
+body {
+    padding-top: 0; /* Will be handled by section padding */
+}
+
+section:first-of-type {
+    padding-top: 120px;
+}
