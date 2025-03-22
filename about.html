@@ -3,68 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Rohit Abilash</title>
+    <title>About - Rohit Abilash Dobbali</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        .about-page {
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+        
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .profile-image {
+            text-align: center;
+        }
+        
+        .profile-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            border: 3px solid var(--surface-light);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .timeline-container {
+            background-color: var(--surface);
+            border-radius: var(--card-border-radius);
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .bio-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .bio-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html">Rohit Abilash Dobbali</a>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">Rohit Abilash Dobbali</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="nav-home">Home</a></li>
+                    <li><a href="about.html" id="nav-about">About</a></li>
+                    <li><a href="research.html" id="nav-research">Research</a></li>
+                    <li><a href="experience.html" id="nav-experience">Experience</a></li>
+                    <li><a href="skills.html" id="nav-skills">Skills</a></li>
+                    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                    <li><a href="achievements.html" id="nav-achievements">Achievements</a></li>
+                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      <nav>
-            <ul>
-                <li><a href="index.html" id="nav-home">Home</a></li>
-                <li><a href="about.html" id="nav-about">About</a></li>
-                <li><a href="research.html" id="nav-research">Research</a></li>
-                <li><a href="experience.html" class="active">Experience</a></li>
-                 <li><a href="skills.html">Skills</a></li>
-                <!-- <li><a href="publications.html" id="nav-publications">Publications</a></li> -->
-                <li><a href="projects.html" id="nav-projects">Projects</a></li>
-                <li><a href="achievements.html" id="nav-achievements">Achievements</a></li>
-                <li><a href="contact.html" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section class="about">
+    <section class="about-page">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
                 <div class="underline"></div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a researcher and developer with a focus on artificial intelligence and machine learning applications. My work aims to bridge theoretical concepts with practical implementations to solve real-world problems.</p>
-                    <p>Currently, I am working as a Research Assistant and Teaching Assistant at the University of Toledo, focusing on AI and ML research in hardware security.</p>
+            
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="pic.jpg" alt="Rohit Abilash Dobbali">
+                </div>
+                
+                <div class="bio-section">
+                    <h3>Researcher & Developer</h3>
+                    <div class="bio-text">
+                        <p>I am a researcher and developer with a focus on artificial intelligence and machine learning applications. My work aims to bridge theoretical concepts with practical implementations to solve real-world problems.</p>
+                        
+                        <p>Currently, I am working as a Research Assistant and Teaching Assistant at the University of Toledo, focusing on AI and ML research in hardware security. My research interests include developing advanced algorithms for hardware Trojan detection, creating synthetic datasets using generative models, and building intelligent agents for automated security analysis.</p>
+                        
+                        <p>Prior to my research role, I worked as a Salesforce Developer for two years, where I designed and implemented custom CRM solutions for enterprise clients. This experience has given me a strong foundation in software development, database management, and client-focused problem solving.</p>
+                        
+                        <p>My goal is to contribute to the advancement of AI-driven security solutions, making technology safer and more reliable through innovative research and development.</p>
+                    </div>
                     
                     <div class="current-position">
                         <h3>Current Position</h3>
                         <p><i class="fas fa-briefcase"></i> Research Assistant at ADMETE lab</p>
-                        <p><i class="fas fa-university"></i> Master's in computer science at University of Toledo</p>
+                        <p><i class="fas fa-university"></i> Master's in Computer Science at University of Toledo</p>
                     </div>
                 </div>
-                
-                <div class="about-details">
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="year">2023-Present</div>
-                                <div class="info">
-                                    <h4>MSc in Computer Science</h4>
-                                    <p>University of Toledo</p>
-                                </div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2023-Present</div>
+                            <div class="info">
+                                <h4>MSc in Computer Science</h4>
+                                <p>University of Toledo</p>
+                                <p>Focusing on Artificial Intelligence and Hardware Security</p>
                             </div>
-                            <div class="timeline-item">
-                                <div class="year">2017 - 2021</div>
-                                <div class="info">
-                                    <h4>BSc in Information Technology</h4>
-                                    <p>JB Institute of Technology </p>
-                                </div>
-                            </div>
-                            
+                        </div>
+                        <div class="timeline-item">
+                            <div class="year">2017 - 2021</div>
+                            <div class="info">
+                                <h4>BSc in Information Technology</h4>
+                                <p>JB Institute of Technology</p>
+                                <p>Graduated with distinction</p>
                             </div>
                         </div>
                     </div>
@@ -74,12 +150,45 @@
     </section>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; <span id="current-year"></span> Rohit Abilash Dobbali. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="back-to-top">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        }
+        
+        // Navigation active state - Only highlight About link
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove active class from all navigation links
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to about link
+            document.querySelector('nav ul li a[href="about.html"]').classList.add('active');
+        });
     </script>
 </body>
 </html>
