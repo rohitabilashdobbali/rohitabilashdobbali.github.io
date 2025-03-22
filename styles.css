@@ -270,6 +270,15 @@ nav ul li a.active::after {
     object-position: center; /* Center the image */
 }
 
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    border: 3px solid var(--surface-light);
+    max-height: 400px; /* Add this line to control the maximum height */
+}
 /* About Section */
 .about {
     padding: var(--section-padding);
