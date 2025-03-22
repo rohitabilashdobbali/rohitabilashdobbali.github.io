@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Rohit Abilash</title>
+    <title>Experience - Rohit Abilash Dobbali</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -113,18 +113,18 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <a href="index.html">Rohit Abilash</a>
+                <a href="index.html">Rohit Abilash Dobbali</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html" class="active">Experience</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" id="nav-home">Home</a></li>
+                    <li><a href="about.html" id="nav-about">About</a></li>
+                    <li><a href="research.html" id="nav-research">Research</a></li>
+                    <li><a href="experience.html" id="nav-experience">Experience</a></li>
+                    <li><a href="skills.html" id="nav-skills">Skills</a></li>
+                    <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                    <li><a href="achievements.html" id="nav-achievements">Achievements</a></li>
+                    <li><a href="contact.html" id="nav-contact">Contact</a></li>
                 </ul>
             </nav>
             <button class="mobile-menu-btn">
@@ -224,7 +224,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p>&copy; <span id="current-year"></span> Rohit Abilash. All rights reserved.</p>
+                    <p>&copy; <span id="current-year"></span> Rohit Abilash Dobbali. All rights reserved.</p>
                 </div>
                 <div class="footer-right">
                     <a href="#" class="back-to-top">
@@ -249,6 +249,17 @@
                 nav.classList.toggle('active');
             });
         }
+        
+        // Navigation active state - Only highlight Experience link
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove active class from all navigation links
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to experience link
+            document.querySelector('nav ul li a[href="experience.html"]').classList.add('active');
+        });
         
         // Add scroll animation for experience items
         document.addEventListener('DOMContentLoaded', () => {
