@@ -199,6 +199,8 @@ nav ul li a.active::after {
 }
 
 /* Hero Section */
+
+/* Hero Section */
 .hero {
     padding-top: 150px;
     padding-bottom: 80px;
@@ -217,43 +219,54 @@ nav ul li a.active::after {
     background: radial-gradient(circle at top right, rgba(0, 188, 212, 0.1), transparent 400px);
     z-index: 0;
 }
+
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 50px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text {
     flex: 1;
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-primary);
 }
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
 
 .hero-image img {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
     border: 3px solid var(--surface-light);
-    max-height: 350px;
-    object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .hero-image {
-        margin-top: 30px;
-    }
-}
+    max-height: 400px; /* Add this line to control the maximum height
 
 /* About Section */
 .about {
