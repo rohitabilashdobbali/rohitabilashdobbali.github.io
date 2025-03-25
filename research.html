@@ -108,5 +108,17 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+    // Add this script at the end of your research.html file, before the closing </body> tag
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // First remove active class from all navigation links
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Then add active class only to the Research link
+    document.querySelector('nav ul li a[href="research.html"]').classList.add('active');
+  });
+</script>
 </body>
 </html>
