@@ -13,14 +13,14 @@
         <div class="logo">
             <a href="index.html">Rohit Abilash</a>
         </div>
-       <nav>
+        <nav>
             <ul>
                 <li><a href="index.html" id="nav-home">Home</a></li>
                 <li><a href="about.html" id="nav-about">About</a></li>
-                <li><a href="research.html" id="nav-research">Research</a></li>
-                <li><a href="experience.html" class="active">Experience</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-               <!-- <li><a href="publications.html" id="nav-publications">Publications</a></li>-->
+                <li><a href="research.html" id="nav-research" class="active">Research</a></li>
+                <li><a href="experience.html" id="nav-experience">Experience</a></li>
+                <li><a href="skills.html" id="nav-skills">Skills</a></li>
+                <!-- <li><a href="publications.html" id="nav-publications">Publications</a></li>-->
                 <li><a href="projects.html" id="nav-projects">Projects</a></li>
                 <li><a href="achievements.html" id="nav-achievements">Achievements</a></li>
                 <li><a href="contact.html" id="nav-contact">Contact</a></li>
@@ -108,17 +108,5 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
-    // Add this script at the end of your research.html file, before the closing </body> tag
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // First remove active class from all navigation links
-    document.querySelectorAll('nav ul li a').forEach(link => {
-      link.classList.remove('active');
-    });
-    
-    // Then add active class only to the Research link
-    document.querySelector('nav ul li a[href="research.html"]').classList.add('active');
-  });
-</script>
 </body>
 </html>
