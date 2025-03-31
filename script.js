@@ -110,47 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    // Contact form submission
-const contactForm = document.getElementById('contactForm');
-const result = document.getElementById('result');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Show loading notification
-        showNotification('Sending message...', 'info');
-        
-        const formData = new FormData(contactForm);
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-        
-        fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                showNotification('Your message has been sent successfully!', 'success');
-            } else {
-                console.log(response);
-                showNotification(json.message, 'error');
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            showNotification('Something went wrong!', 'error');
-        })
-        .then(function() {
-            contactForm.reset();
-        });
-    });
-}
+    
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     
