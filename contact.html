@@ -62,7 +62,11 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" method="POST">
+                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                         <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio Website">
+                          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -79,9 +83,10 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+                            <button type="submit" class="btn">Send Message</button>
+                            <div id="result"></div>
+                        </form>
+                        </div>
             </div>
         </div>
     </section>
