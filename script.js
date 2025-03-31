@@ -137,28 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // EmailJS sending logic
-            const templateParams = {
-                from_name: name,
-                from_email: email,
-                subject: subject,
-                message: message,
-                to_name: 'Rohit Abilash'
-            };
+            // Simulate form submission
+            // In a real application, you would send this data to a server
             
-            // Show loading notification
-            showNotification('Sending message...', 'info');
+            // Show success message
+            showNotification('Your message has been sent successfully!', 'success');
             
-            // Send the email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    showNotification('Your message has been sent successfully!', 'success');
-                    contactForm.reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    showNotification('Failed to send message. Please try again later.', 'error');
-                });
+            // Reset form
+            contactForm.reset();
         });
     }
     
@@ -223,9 +209,6 @@ function showNotification(message, type) {
     } else if (type === 'error') {
         notification.style.backgroundColor = 'rgba(207, 102, 121, 0.9)';
         notification.style.color = '#ffffff';
-    } else if (type === 'info') {
-        notification.style.backgroundColor = 'rgba(0, 188, 212, 0.9)';
-        notification.style.color = '#121212';
     } else {
         notification.style.backgroundColor = 'rgba(0, 188, 212, 0.9)';
         notification.style.color = '#121212';
